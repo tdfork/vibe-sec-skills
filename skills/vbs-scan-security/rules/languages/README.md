@@ -24,9 +24,19 @@ rules/
     │   ├── 11-csrf.md
     │   ├── 17-verbose-error-debug-mode.md
     │   └── 21-command-injection.md
-    └── typescript/
-        ├── 02-sql-injection.md        (applies_to: typescript — gộp cả .js .ts)
-        ├── 03-xss.md
+    ├── typescript/
+    │   ├── 02-sql-injection.md        (applies_to: typescript — gộp cả .js .ts)
+    │   ├── 03-xss.md
+    │   ├── 07-mass-assignment.md
+    │   ├── 08-insecure-deserialization.md
+    │   ├── 09-ssrf.md
+    │   ├── 11-csrf.md
+    │   ├── 14-jwt-none-algorithm.md
+    │   ├── 15-cors-misconfig.md
+    │   ├── 17-verbose-error-debug-mode.md
+    │   └── 21-command-injection.md
+    └── python/
+        ├── 02-sql-injection.md        (applies_to: python — .py .pyw)
         ├── 07-mass-assignment.md
         ├── 08-insecure-deserialization.md
         ├── 09-ssrf.md
@@ -57,8 +67,9 @@ See `references/language-detection.md` for the detection heuristic. In short:
 | Go | `go/` | 5 | Stable (v0.1) |
 | PHP | `php/` | 5 | Stable (v0.1) |
 | TypeScript/JavaScript | `typescript/` | 10 | Stable (v0.2) — includes both `.ts` and `.js` files |
+| Python | `python/` | 9 | Stable (v0.4) — `.py` and `.pyw` |
 
-**Phase v0.3+** (planned): Python, Ruby, Rust, Java/Kotlin.
+**Phase v0.5+** (planned): Ruby, Rust, Java/Kotlin.
 
 ## Why specialize?
 

@@ -23,7 +23,7 @@ vbsec đưa quy trình rà soát bảo mật cấp production vào trong vòng l
 
 Trình quét đã được kiểm thử với benchmark OWASP và nhiều bộ mã nguồn mở khác có chủ đích chứa lỗ hổng để dùng cho mục đích đào tạo — vbsec phát hiện được hầu hết các lỗ hổng đã được tài liệu hoá: SQL Injection, NoSQL Injection, JWT misuse, Broken Access Control, Mass Assignment, RCE qua deserialization, và nhiều nhóm khác.
 
-Bộ quy tắc chung áp dụng cho mọi ngôn ngữ lập trình. Các quy tắc chuyên sâu theo ngôn ngữ hiện có cho Go, PHP và TypeScript/JavaScript, bao phủ các framework phổ biến: React, Vue, Angular, Express, NestJS, Next.js, Sequelize, Prisma, Mongoose. Các ngôn ngữ khác đang nằm trong lộ trình phát triển.
+Bộ quy tắc chung áp dụng cho mọi ngôn ngữ lập trình. Các quy tắc chuyên sâu theo ngôn ngữ hiện có cho Go, PHP, TypeScript/JavaScript và Python, bao phủ các framework phổ biến: React, Vue, Angular, Express, NestJS, Next.js, Django, Flask, FastAPI, SQLAlchemy, Sequelize, Prisma, Mongoose. Các ngôn ngữ khác đang nằm trong lộ trình phát triển.
 
 ## Tác giả
 
@@ -128,7 +128,7 @@ Danh sách hiện tại có 21 quy tắc và sẽ tiếp tục mở rộng.
 - v0.1 — Bộ quy tắc chung + chuyên sâu Go + PHP + báo cáo song ngữ ✅
 - v0.2 — Chuyên sâu TypeScript/JavaScript (Sequelize/Prisma/Mongoose, React/Vue/Angular, Express/NestJS/Next.js) ✅
 - v0.3 (hiện tại) — Phạm vi mặc định chuyển sang toàn repo, lưu báo cáo cố định, giải thích chi tiết cho từng finding ✅
-- v0.4 — Chuyên sâu Python (pickle, Flask debug, Django `SECRET_KEY`)
+- v0.4 (hiện tại) — Chuyên sâu Python (SQLAlchemy/Django ORM SQLi, pickle/yaml deserialization RCE, Werkzeug debugger, FastAPI/Flask/Django CSRF + CORS, PyJWT algorithms, subprocess shell=True) ✅
 - v0.5 — Tương thích Codex (`.codex/skills/`)
 - v0.6+ — Ruby, Java, Rust — theo nhu cầu cộng đồng
 

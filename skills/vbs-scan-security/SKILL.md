@@ -185,7 +185,7 @@ File i18n chứa bảng key→text cho toàn bộ user-facing strings (section h
 3. Có `rules/languages/<lang>/` → load overlay; không có → chỉ dùng generic
 4. Multi-lang repo (cả Go backend + Vue frontend) → load cả 2 overlay
 
-**Hiện hỗ trợ chuyên sâu:** `go`, `php`, `typescript` (gộp JS+TS). Các lang khác chỉ dùng generic rules.
+**Hiện hỗ trợ chuyên sâu:** `go`, `php`, `typescript` (gộp JS+TS), `python`. Các lang khác chỉ dùng generic rules.
 
 ---
 

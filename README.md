@@ -23,7 +23,7 @@ vbsec brings production-grade security review into the AI coding loop. It runs a
 
 The scanner has been validated against OWASP and other deliberately vulnerable open-source benchmarks (training applications maintained by the security community) — vbsec identifies findings matching the documented challenges across SQL injection, NoSQL injection, JWT misuse, broken access control, mass assignment, deserialization RCE, and more.
 
-Generic rules apply to every language. Specialized rule overlays exist for Go, PHP, and TypeScript/JavaScript, covering common frameworks: React, Vue, Angular, Express, NestJS, Next.js, Sequelize, Prisma, and Mongoose. Additional language overlays are on the roadmap.
+Generic rules apply to every language. Specialized rule overlays exist for Go, PHP, TypeScript/JavaScript, and Python, covering common frameworks: React, Vue, Angular, Express, NestJS, Next.js, Django, Flask, FastAPI, SQLAlchemy, Sequelize, Prisma, and Mongoose. Additional language overlays are on the roadmap.
 
 ## Authors
 
@@ -128,7 +128,7 @@ The list currently contains 21 rules and will continue to expand.
 - v0.1 — Generic rule set + Go + PHP specialization + bilingual output ✅
 - v0.2 — TypeScript/JavaScript specialization (Sequelize/Prisma/Mongoose, React/Vue/Angular, Express/NestJS/Next.js) ✅
 - v0.3 (current) — Default scope changed to full-repo, persistent reports, verbose per-finding explanations ✅
-- v0.4 — Python specialization (pickle, Flask debug, Django `SECRET_KEY`)
+- v0.4 (current) — Python specialization (SQLAlchemy/Django ORM SQLi, pickle/yaml deserialization RCE, Werkzeug debugger, FastAPI/Flask/Django CSRF + CORS, PyJWT algorithms, subprocess shell=True) ✅
 - v0.5 — Codex compatibility (`.codex/skills/`)
 - v0.6+ — Ruby, Java, Rust — community-driven
 
