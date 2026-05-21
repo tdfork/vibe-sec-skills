@@ -127,7 +127,7 @@ Danh sách hiện tại có 21 quy tắc và sẽ tiếp tục mở rộng.
 
 - v0.1 — Bộ quy tắc chung + chuyên sâu Go + PHP + báo cáo song ngữ ✅
 - v0.2 — Chuyên sâu TypeScript/JavaScript (Sequelize/Prisma/Mongoose, React/Vue/Angular, Express/NestJS/Next.js) ✅
-- v0.3 (hiện tại) — Phạm vi mặc định chuyển sang toàn repo, lưu báo cáo cố định, giải thích chi tiết cho từng finding ✅
+- v0.3 — Phạm vi mặc định chuyển sang toàn repo, lưu báo cáo cố định, giải thích chi tiết cho từng finding ✅
 - v0.4 (hiện tại) — Chuyên sâu Python (SQLAlchemy/Django ORM SQLi, pickle/yaml deserialization RCE, Werkzeug debugger, FastAPI/Flask/Django CSRF + CORS, PyJWT algorithms, subprocess shell=True) ✅
 - v0.5 — Tương thích Codex (`.codex/skills/`)
 - v0.6+ — Ruby, Java, Rust — theo nhu cầu cộng đồng

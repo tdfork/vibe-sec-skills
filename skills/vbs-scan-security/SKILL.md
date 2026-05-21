@@ -111,6 +111,12 @@ Dùng Bash tool ĐÚNG MỘT LẦN cho step này (gather files là việc của 
 ```bash
 ARGS="${ARGUMENTS:-}"
 
+# 0) Pre-flight: skill yêu cầu git repo (tất cả scope đều dùng git)
+if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+  echo "{msg_no_git}"
+  exit 1
+fi
+
 # 1) Extract lang flag (default vi)
 LANG="vi"
 if echo "$ARGS" | grep -qE 'lang=en|--en|\ben\b'; then LANG="en"; fi
@@ -160,7 +166,7 @@ echo "Report file: $REPORT_FILE"
 - `vbsec-reports/` được excluded khỏi scan list (Step 4) — không scan chính báo cáo của mình
 - Path output `vbsec-reports/scan-<timestamp>.md` cần được mkdir trước khi scan, để workflows save vào
 
-**Lưu ý:** Nếu không phải git repo, fallback: yêu cầu user chỉ định directory cụ thể qua arg `path=...`.
+**Lưu ý:** Skill yêu cầu git repository. Trên non-git directory, Step 0 sẽ in `msg_no_git` và dừng. Trước khi chạy, `cd` vào repo có `.git/`.
 
 ---
 
@@ -287,8 +293,9 @@ REPORT_EOF
 
 # In dòng cuối ra stdout:
 echo ""
-echo "📄 $(i18n msg_report_saved): $REPORT_FILE"
-[ "$GITIGNORE_WARNING" = "missing" ] && echo "⚠️ $(i18n msg_gitignore_warning_title): $(i18n msg_gitignore_warning_text)"
+# LLM thay {key} bằng giá trị từ i18n file đã load ở Step 1 (KHÔNG có shell function tên `i18n`):
+echo "📄 {msg_report_saved}: $REPORT_FILE"
+[ "$GITIGNORE_WARNING" = "missing" ] && echo "⚠️ {msg_gitignore_warning_title}: {msg_gitignore_warning_text}"
 ```
 
 LLM agent thực thi bằng Write tool (NOT bash heredoc) để ghi file, sau đó in 1-2 dòng note ra stdout. Nội dung file PHẢI IDENTICAL với output trên stdout.

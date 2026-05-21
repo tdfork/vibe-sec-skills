@@ -127,7 +127,7 @@ The list currently contains 21 rules and will continue to expand.
 
 - v0.1 — Generic rule set + Go + PHP specialization + bilingual output ✅
 - v0.2 — TypeScript/JavaScript specialization (Sequelize/Prisma/Mongoose, React/Vue/Angular, Express/NestJS/Next.js) ✅
-- v0.3 (current) — Default scope changed to full-repo, persistent reports, verbose per-finding explanations ✅
+- v0.3 — Default scope changed to full-repo, persistent reports, verbose per-finding explanations ✅
 - v0.4 (current) — Python specialization (SQLAlchemy/Django ORM SQLi, pickle/yaml deserialization RCE, Werkzeug debugger, FastAPI/Flask/Django CSRF + CORS, PyJWT algorithms, subprocess shell=True) ✅
 - v0.5 — Codex compatibility (`.codex/skills/`)
 - v0.6+ — Ruby, Java, Rust — community-driven
